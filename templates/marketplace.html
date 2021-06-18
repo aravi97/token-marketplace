@@ -37,7 +37,10 @@
           <td>{{tokens["name"]}}</td>
           <td>{{tokens["owner_id"]}}</td>
           <td>{{tokens["price"]}}</td>
-          <td><button type="button">Add to cart</button></td>
+          <td>
+            <form method="post">
+              <button type="submit" name="token" value={{ tokens["id"] }} >Buy</button></td>
+            </form>
         </tr>
       {% endfor %}
     </tbody>
