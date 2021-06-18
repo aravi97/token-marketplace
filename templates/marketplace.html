@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  
+  <style>
+    body {
+      background-image: url('/static/assets/img/background.jpg');
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
+
+  <h1>Marketplace</h1>
+              
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Token Name</th>
+        <th>Creator</th>
+        <th>Price</th>
+        <th>Trade</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for tokens in g.all_tokens %}
+        <tr>
+          <td>{{tokens["name"]}}</td>
+          <td>{{tokens["owner_id"]}}</td>
+          <td>{{tokens["price"]}}</td>
+          <td><button type="button">Add to cart</button></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
