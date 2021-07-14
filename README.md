@@ -8,7 +8,8 @@ Deployed on Heroku - https://token-marketplace.herokuapp.com/
   
 ## Credentials  
 <details>
-    <summary align='left'>username: 'alice' or 'bob'</summary>  
-    password: *same as username*
+  <summary align='left'>username: 'alice' or 'bob'</summary>  
+    
+  password: *same as username*
     
 </details>
